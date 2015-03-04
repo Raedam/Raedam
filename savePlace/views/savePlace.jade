@@ -1,0 +1,29 @@
+html
+  head
+    title Simple login
+    meta(charset='UTF-8')
+    script(src='//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js')
+    script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&key=AIzaSyCQQ-TBEprNpwHYAlHGhZpWAiQ5hVZxjPI')
+
+  body
+    h1 Registra nueva  ubicacion
+    form(action='/server', method='post'  enctype="multipart/form-data")
+      h4 calle
+        input#calle(type='text', size='40', name='calle')
+        br
+      h4 numero
+        input#numero(type='text', size='40', name='numero')
+        br
+      h4 colonia
+        input#colonia(type='text', size='40', name='colonia')
+        br
+      h4 delegacion
+        input#delegacion(type='text', size='40', name='delegacion')
+        br
+      #map-canvas(style='width:60%; height:60%')
+        br
+      h4 foto
+        input#foto(type='file', name='ufoto')
+      input#submit(type='submit', value='Submit')
+
+      script(src='/javascripts/hola.js')
