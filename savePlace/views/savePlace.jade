@@ -7,23 +7,29 @@ html
 
   body
     h1 Registra nueva  ubicacion
-    form(action='/server', method='post'  enctype="multipart/form-data")
-      h4 calle
+    form(action='/server', method='post'  enctype="multipart/form-data" name="place")
+      h4 Calle
         input#calle(type='text', size='40', name='calle')
         br
-      h4 numero
+      h4 Numero
         input#numero(type='text', size='40', name='numero')
         br
-      h4 colonia
+      h4 Colonia
         input#colonia(type='text', size='40', name='colonia')
         br
-      h4 delegacion
+      h4 Delegacion
         input#delegacion(type='text', size='40', name='delegacion')
+        br
+      h4 Codigo postal
+        input#cp(type='text', size='40', name='cp')
         br
       #map-canvas(style='width:60%; height:60%')
         br
       h4 foto
         input#foto(type='file', name='ufoto')
+        input#latitud( type='text', size='40', name='la')
+        input#longuitud( type='text', size='40', name='lo')
+        
       input#submit(type='submit', value='Submit')
 
       script(src='/javascripts/hola.js')

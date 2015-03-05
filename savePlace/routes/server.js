@@ -16,10 +16,13 @@ var place = new  moon.Schema({
   numero:String,
   colonia:String,
   delegacion:String,
+  cp:String,
   foto:String,
+  lat:Number,
+  lon:Number,
   updated_at: { type: Date, default: Date.now },
 });
-var saveP = moon.model('saveP', place);
+var saveP = moon.model('savePlace', place);
 
 
 router.use(multer({ dest: './uploads/',
@@ -32,18 +35,25 @@ onFileUploadStart: function (file) {
 onFileUploadComplete: function (file) {
   console.log(file.fieldname + ' uploaded to  ' + file.path)
   done=true;
+  var savePlace = new saveP({
+
+    foto:file.originalname,
+  });
 }
 }));
 
 
 router.post('/',function(req,res){
   console.log("Hola");
-  var savePlace = new Todo({
-    calle:'Uno',
-    numero:'2',
-    colonia:'Suber',
-    delegacion:'Iztacalco',
-    foto:'uno'
+  var savePlace = new saveP({
+    calle:req.body.calle,
+    numero:req.body.numero,
+    colonia:req.body.colonia,
+    delegacion:req.body.delegacion,
+    cp:req.body.cp,
+  //  foto:file.originalname,
+    lat:req.body.la,
+    lon:req.body.lo
 
   });
 
@@ -51,7 +61,7 @@ router.post('/',function(req,res){
       if(err)
           console.log(err);
       else
-          console.log(todo);
+          console.log(err);
   });
 });
 

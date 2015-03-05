@@ -30,8 +30,8 @@ google.maps.event.addListener(marker, 'mouseover', function() {
   infowindow.setContent("<p>Marker Location:" + marker.getPosition() + "</p>");
     var lat = marker.getPosition().lat();
     var ln = marker.getPosition().lng();
-     document.servicio.lat.value=lat;
-      document.servicio.lon.value=ln;
+     document.place.la.value=lat;
+      document.place.lo.value=ln;
     infowindow.open(map, marker);
   });
       map.setCenter(pos);
@@ -52,7 +52,7 @@ function toggleBounce() {
  /* if (marker.getAnimation() != null) {
     //marker.setAnimation(null);
     marker.setTitle="Hola";
-  
+
   } else {
    // marker.setAnimation(google.maps.Animation.BOUNCE);
   } */
