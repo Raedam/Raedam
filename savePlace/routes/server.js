@@ -44,7 +44,7 @@ onFileUploadComplete: function (file) {
 
 
 router.post('/',function(req,res){
-  console.log("Hola");
+  console.log("start bd  save");
   var savePlace = new saveP({
     calle:req.body.calle,
     numero:req.body.numero,
