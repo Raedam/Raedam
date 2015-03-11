@@ -55,6 +55,7 @@ router.post('/',function(req,res){
     lat:req.body.la,
     lon:req.body.lo
 
+
   });
 
   savePlace.save(function(err){
@@ -63,6 +64,8 @@ router.post('/',function(req,res){
       else
           console.log(err);
   });
+
+  res.send('<h1>Lugar Guardado</h1>');
 });
 
 

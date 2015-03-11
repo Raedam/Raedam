@@ -20,6 +20,7 @@ function initialize() {
       }); */
 
     var marker = new google.maps.Marker({
+    icon:'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
     position: pos,
     map: map,
      draggable:true,
