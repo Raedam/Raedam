@@ -3,22 +3,12 @@
   <title>Raedam</title>
   <meta charset = "UTF-8">
   <link rel="stylesheet" href= "stylesheets/registro.css"/>
-  <link rel="stylesheet" href="css/foundation/css/foundation.css"/>
-  <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.css"/>
-  <link rel="stylesheet" href="font-awesome-4.3.0/css/font-awesome.min.css"/>
-  <script src="../foundation/js/vendor/modernizr.js"></script>
+  <link rel="stylesheet" href="stylesheets/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="stylesheets/font-awesome-4.3.0/css/font-awesome.css"/>
+  <link rel="stylesheet" href="stylesheets/font-awesome-4.3.0/css/font-awesome.min.css"/>
+  <script src="stylesheets/foundation/js/vendor/modernizr.js"></script>
   <script src="http://maps.googleapis.com/maps/api/js"></script>
-  <script>
-  function initialize() {
-    var mapProp = {
-      center:new google.maps.LatLng(19.4357561,-99.1955405),
-      zoom:5,
-      mapTypeId:google.maps.MapTypeId.ROADMAP
-    };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-  }
-  google.maps.event.addDomListener(window, 'load', initialize);
-  </script>
+  <script src="javascripts/hola.js"></script>
 
 </head>
 <body>
@@ -107,7 +97,7 @@
   <div class= "large-12 columns">
     <h2>Ponga en el mapa la ubicación</h2>
     <div class = "large-12 columns">
-      <div id="googleMap"></div>
+      <div id="map-canvas"></div>
     </div>
   </div>
 </div>
