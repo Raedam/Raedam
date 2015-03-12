@@ -1,0 +1,42 @@
+ <!DOCTYPE html>
+ <html>
+   <head>
+     <title>Geolocation</title>
+     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+     <meta charset="utf-8">
+     <style>
+       html, body, #map-canvas {
+         height: 90%;
+         width: 80%;
+         margin: 0px;
+         padding: 0px
+       }
+     </style>
+     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true"></script>
+
+     <script src="/javascripts/hola.js"></script>
+   </head>
+   <body>
+     <h1>Registra nueva  ubicacion</h1>
+     <form action="/server" method="post" enctype="multipart/form-data" name="place">
+       <h4>Calle</h4>
+         <input id="calle" type="text" size="40" name="calle">
+       <h4>Numero</h4>
+         <input id="numero" type="text" size="40" name="numero">
+       <h4>Colonia</h4>
+        <input id="colonia" type="text" size="40" name="colonia">
+         <h4>Delegacion</h4>
+        <input id="delegacion" type="text" size="40" name="delegacion">
+        <h4>Codigo postal</h4>
+          <input id="cp" type="text" size="40" name="cp">
+          <h4>Imagen del Lugar</h4>
+            <input id="foto" type="file" name="ufoto">
+            <input id="latitud" type="text" size="40" name="la">
+            <input id="longuitud" type="hidden" size="40" name="lo">
+
+          <input id="submit" type="submit" value="Submit">
+      </form>
+
+   <div id="map-canvas"></div>
+   </body>
+ </html>

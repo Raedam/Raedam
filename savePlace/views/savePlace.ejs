@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple login</title>
+    <meta charset="UTF-8">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;signed_in=true&amp;key=AIzaSyCQQ-TBEprNpwHYAlHGhZpWAiQ5hVZxjPI"></script>
+    </head>
+  <body>
+    <h1>Registra nueva  ubicacion</h1>
+    <form action="/server" method="post" enctype="multipart/form-data" name="place">
+      <h4>Calle
+        <input id="calle" type="text" size="40" name="calle"><br>
+      </h4>
+      <h4>Numero
+        <input id="numero" type="text" size="40" name="numero"><br>
+      </h4>
+      <h4>Colonia
+        <input id="colonia" type="text" size="40" name="colonia"><br>
+      </h4>
+      <h4>Delegacion
+        <input id="delegacion" type="text" size="40" name="delegacion"><br>
+      </h4>
+      <h4>Codigo postal
+        <input id="cp" type="text" size="40" name="cp"><br>
+      </h4>
+      <div id="map-canvas" style="width:80%; height:80%"><br></div>
+      <h4>Imagen del Lugar
+        <input id="foto" type="file" name="ufoto">
+        <input id="latitud" type="hidden" size="40" name="la">
+        <input id="longuitud" type="hidden" size="40" name="lo">
+      </h4>
+      <input id="submit" type="submit" value="Submit">
+      <script src="/javascripts/hola.js"></script>
+    </form>
+  </body>
+</html>
