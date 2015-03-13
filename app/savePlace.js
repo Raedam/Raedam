@@ -17,7 +17,14 @@ var place = new  moon.Schema({
   colonia:String,
   delegacion:String,
   cp:String,
-  foto:String,
+  tLugar:Number,
+  fechas : {
+    dEntrada:String,
+    tEntrada:String,
+    dSalida:String,
+    tSalida:String,
+  },
+  //foto:String,
   lat:Number,
   lon:Number,
   updated_at: { type: Date, default: Date.now },
@@ -51,18 +58,24 @@ router.post('/',function(req,res){
     colonia:req.body.colonia,
     delegacion:req.body.delegacion,
     cp:req.body.cp,
+    tLugar:req.body.lugar,
+    fechas : {
+        dEntrada:req.body.dateE,
+        tEntrada:req.body.timeE,
+        dSalida:req.body.dateS,
+        tSalida:req.body.timeS
+        },
   //  foto:file.originalname,
-    lat:req.body.la,
-    lon:req.body.lo
+    lat:req.body.lat,
+    lon:req.body.lon
 
 
   });
 
   savePlace.save(function(err){
       if(err)
-          console.log(err);
-      else
-          console.log(err);
+          console.log("El erro"+err);
+
   });
 
   res.send('<h1>Lugar Guardado</h1>');
