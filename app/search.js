@@ -1,14 +1,17 @@
-var express        =         require("express");
+var app        =         require("express")();
 var bodyParser     =         require("body-parser");
 var util           =         require('util');
 var multer         =         require('multer')
 var moon           =         require('mongoose');
-var router         =         express.Router();
-router.use(bodyParser.urlencoded({ extended: false }));
+//var router         =         express.Router();
+var server         =         require('http').Server(app);
+var io            =          require('socket.io')(server);
+
+app.use(bodyParser.urlencoded({ extended: false }));
 /*router.get('/server',function(req,res){
  res.render('../views/savePlace');
 });*/
-
+global.points;
 moon.createConnection('mongodb://localhost/prueba', function(err, db){
   if(err)
     console.log(err);
@@ -19,31 +22,28 @@ moon.createConnection('mongodb://localhost/prueba', function(err, db){
 });
 
 
-router.get('/',function(req,res){
+app.get('/',function(req,res){
 
   var serch = moon.model('savePlace');
 
-  serch.findOne({cp:'11550'}).exec(function(err,data){
-    //res.send(data.lat);
-  /*  res.send("<input id='lat' type='hidden' value='"+data.lat+"'/>'"
-    "<input id='lon' type='hidden' value='"+data.lat+"'/>'"
-    "<input id='calle' type='hidden' value='"+data.lat+"'/>'"
-    "<input id='colonia' type='hidden' value='"+data.lat+"'/>'"
-    "<input id='nombre' type='hidden' value='"+data.lat+"'/>'"
+  serch.find({}).select('lat lon').exec(function(err,data){
+    console.log(data);
+    global.points=data;
 
-
-
-
-
-
-  ); */
-  res.render('save',{title:"page"});
-
+    console.log(global.points);
+    res.render('busqueda');
   });
-
-
-
 
 });
 
-module.exports = router;
+io.on('connection', function (socket) {
+  console.log('hola');
+  socket.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});
+
+
+
+module.exports = app;
