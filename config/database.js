@@ -1,3 +1,3 @@
 module.exports = {
-	'url' : 'mongodb://localhost:27017/Raedam'
+	'url' : 'mongodb://rafa.com:27017/Raedam'
 };
