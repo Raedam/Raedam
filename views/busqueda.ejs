@@ -1,4 +1,4 @@
-<html>
+<html lang="en" ng-app >
 	<head>
 		<meta charset = "UTF-8">
 	  <link rel="stylesheet" href= "stylesheets/registro.css"/>
@@ -7,9 +7,11 @@
 	  <link rel="stylesheet" href="stylesheets/font-awesome-4.3.0/css/font-awesome.min.css"/>
 	  <script src="stylesheets/foundation/js/vendor/modernizr.js"></script>
 	  <script src="http://maps.googleapis.com/maps/api/js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.6/angular.min.js"></script>
+
 
 		<script>
-		
+
 
 	  function initialize() {
 	    var mapOptions = {
@@ -103,7 +105,7 @@
 	  </script>
 	 <title>Raedam-Busqueda de espacios</title>
 	</head>
-	<body>
+	<body ng-controller="printPlace">
     <div class="large-12 columns">
       <header>
     <div class="wrapper">
@@ -121,6 +123,14 @@
         <br>
     </div>
 </div>
+
+<div id="todo-list" class="row">
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="checkbox" ng-repeat="lugar in lugares">
+                    <label>
+                        <input type="checkbox" > {{ lugar.text }}
+                    </label>
+
 <!--Aqui va el mapa-->
 <div class="map">
   <div class= "large-12 columns">
@@ -132,4 +142,5 @@
 </div>
 
 	</body>
+	<script src="javascripts/search.js"></script>
 </html>

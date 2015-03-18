@@ -1,4 +1,4 @@
-var express  = require('express');
+var express = require('express');
 var app      = express();
 var port     = process.env.PORT || 3000;
 var mongoose = require('mongoose');
@@ -9,6 +9,9 @@ var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
 var session      = require('express-session');
+var http = require("http");
+
+
 
 var configDB = require('./config/database.js');
 
@@ -31,9 +34,12 @@ app.use(passport.session());
 app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
+
+
+
 require('./app/routes.js')(app, passport);
 app.use('/savePlace',server);
-app.use('/serch',serch);
+app.use('/search',serch);
 
 app.listen(port);
 console.log('The magic happens on port ' + port);

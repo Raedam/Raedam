@@ -4,8 +4,8 @@ var util           =         require('util');
 var multer         =         require('multer')
 var moon           =         require('mongoose');
 //var router         =         express.Router();
-var server         =         require('http').Server(app);
-var io            =          require('socket.io')(server);
+var ws = require("nodejs-websocket");
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 /*router.get('/server',function(req,res){
@@ -22,27 +22,22 @@ moon.createConnection('mongodb://localhost/prueba', function(err, db){
 });
 
 
-app.get('/',function(req,res){
+app.get('/all',function(req,res){
 
   var serch = moon.model('savePlace');
 
   serch.find({}).select('lat lon').exec(function(err,data){
-    console.log(data);
-    global.points=data;
+    res.json(data);
 
-    console.log(global.points);
-    res.render('busqueda');
-  });
 
+
+   });
 });
 
-io.on('connection', function (socket) {
-  console.log('hola');
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
+ app.get('*',function(req,res){
+
+   res.render('busqueda.ejs');
+ });
 
 
 
