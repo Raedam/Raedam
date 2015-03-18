@@ -5,9 +5,6 @@ var multer         =         require('multer')
 var moon           =         require('mongoose');
 var router         =         express.Router();
 router.use(bodyParser.urlencoded({ extended: false }));
-/*router.get('/server',function(req,res){
- res.render('../views/savePlace');
-});*/
 
 moon.connect('mongodb://localhost/prueba');
 var place = new  moon.Schema({
@@ -51,7 +48,6 @@ router.post('/',function(req,res){
     colonia:req.body.colonia,
     delegacion:req.body.delegacion,
     cp:req.body.cp,
-  //  foto:file.originalname,
     lat:req.body.la,
     lon:req.body.lo
 
@@ -73,9 +69,5 @@ router.post('/',function(req,res){
 router.get('/',function(req,res){
   res.render('place');
 });
-
-
-
-
 
 module.exports = router;
