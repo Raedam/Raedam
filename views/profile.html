@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Perfil - RAEDAM</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+	function initialize() {
+		var latitud = ((Math.random() * 0.01) + 19);
+		var longitud = ((Math.random() * 0.01) + (-99));
+		var latitud2 = ((Math.random() * 0.01) + 19);
+		var longitud2 = ((Math.random() * 0.01) + (-99));
+		var latitud3 = ((Math.random() * 0.01) + 19);
+		var longitud3 = ((Math.random() * 0.01) + (-99));
+
+	  	var myLatlng = new google.maps.LatLng(latitud, longitud);
+	   	var myLatlng2 = new google.maps.LatLng(latitud2, longitud2);
+	    var myLatlng3 = new google.maps.LatLng(latitud3, longitud3);
+	  	var mapOptions = {
+	    	zoom: 15,
+	    	center: myLatlng
+	  	}
+	  	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+	  	var marker = new google.maps.Marker({
+	    	position: myLatlng,
+	    	map: map,
+	    	title: 'Hello World!',
+	    	animation: google.maps.Animation.DROP,
+	    	draggable: true
+	  	});
+	   	var marker2 = new google.maps.Marker({
+	    	position: myLatlng2,
+	    	map: map,
+	    	title: 'H',
+	    	animation: google.maps.Animation.DROP,
+	    	draggable: true
+	  	});
+	    var marker3 = new google.maps.Marker({
+	    	position: myLatlng3,
+	    	map: map,
+	    	title: 'H',
+	    	animation: google.maps.Animation.DROP,
+	    	draggable: true
+	  	});
+	}
+	google.maps.event.addDomListener(window, 'load', initialize);
+	</script>
+</head>
+
+<body>	
+
+	<header>
+		<div class="wrapper">
+			<a href="#"><img src="img/Raedam-logo.png" width="12%" height="12%" alt="Raedam logo" title="Raedam - ¡Encuentra el mejor lugar para estacionarte!" /></a>
+			
+			<span id="usernav">
+			<a href="#">Logout</a> 
+			
+			- <a href="#">Mi Perfil<span><img src="img/Raedam-icon.ico" width="10%" height="10%" /></span></a></span>
+		</div>
+	</header>
+	
+	<nav>
+		<ul id="n" class="clearfix">
+			
+			<li class="sel"><a href="#">Perfil</a></li>
+			<li><a href="#">Registra tu Espacio</a></li>
+			<li><a href="#">Búsqueda de Espacios</a></li>
+		
+		</ul>
+	</nav>
+	
+	<div id="content" class="clearfix">
+		<section id="left">
+			<div id="userStats" class="clearfix">
+				<div class="pic">
+					<a href="#"><img src="img/user-avatar.jpg" width="150" height="150" /></a>
+				</div>
+				
+				<div class="data">
+					<h1>Alejandro Comi</h1>
+					<h3>México, D.F.</h3>
+					<div class="SocialMediaLinks">
+						<a href="http://twitter.com/AlejandroComi" rel="me" target="_blank"><img src="img/twitter.png" alt="@AlejandroComi" /></a>
+						<a href="http://facebook.com/alejandroComiPretelin" rel="me" target="_blank"><img src="img/facebook.png" width="7%" height="7%" /></a>
+					</div>
+					<div class="sep"></div>
+					<ul class="numbers clearfix">
+						<li>Check-In's<strong>49</strong></li>
+						<li>Rentados<strong>115</strong></li>
+						<li class="nobrdr">Utilizado hace<strong>1 </strong></li>
+					</ul>
+				</div>
+			</div>
+			<h1>Sobre Mí:</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			
+			<article><b>Espacios Rentados:</b></article>
+
+		<container>
+		<div id="map-canvas" style="width:600px;height:380px;"></div>
+		</container>	
+
+		</section>
+		
+		<section id="right">
+			<div class="gcontent">
+				<div class="head"><h1>Medallas (3)</h1></div>
+				<div class="boxy">
+					<p>¡Estaciónate y Obtén más beneficios!</p>
+					
+					<div class="medallas">
+						<a href="#"><img src="img/tuola.png" width="20%" /></a>
+						<a href="#"><img src="img/carrot.png" /></a>
+						<a href="#"><img src="img/trueque.png" /></a>
+					</div>
+					
+					<span><a href="medallas.html">Ver Todos…</a></span>
+				</div>
+			</div>
+			
+			<div class="gcontent">
+				<div class="head"><h1>Amigos con Raedam</h1></div>
+				<div class="boxy">
+					<p>Tus amigos - 45 en total</p>
+					
+					<div class="friendslist clearfix">
+						<div class="friend">
+							<a href="#"><img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Rafa" /></a><span class="friendly"><a href="#">Rafa</a></span>
+						</div>
+						
+						<div class="friend">
+							<a href="#"><img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Edwin" /></a><span class="friendly"><a href="#">Edwin</a></span>
+						</div>
+						
+						<div class="friend">
+							<a href="#"><img src="img/friend_avatar_default.jpg" width="30" height="30" alt="David" /></a><span class="friendly"><a href="#">David</a></span>
+						</div>
+						
+						<div class="friend">
+							<a href="#"><img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Vicente" /></a><span class="friendly"><a href="#">Vicente</a></span>
+						</div>
+						
+						<div class="friend">
+							<a href="#"><img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Toño" /></a><span class="friendly"><a href="#">Toño</a></span>
+						</div>
+						
+						<div class="friend">
+							<a href="#"><img src="img/friend_avatar_default.jpg" width="30" height="30" alt="Juan" /></a><span class="friendly"><a href="#">Petter</a></span>
+						</div>
+					</div>
+					
+					<span><a href="#">Ver Todos...</a></span>
+				</div>
+			</div>
+		</section>
+	</div>
+</body>
+</html>
