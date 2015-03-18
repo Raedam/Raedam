@@ -4,7 +4,7 @@ var port     = process.env.PORT || 3000;
 var mongoose = require('mongoose');
 var passport = require('passport');
 var flash    = require('connect-flash');
-var path = require('path');
+var path     = require('path');
 var morgan       = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser   = require('body-parser');
@@ -32,8 +32,8 @@ app.use(flash());
 app.use(express.static(path.join(__dirname, 'public')));
 
 require('./app/routes.js')(app, passport);
-app.use('/savePlace',server);
-app.use('/serch',serch);
+app.use('/savePlace', server);
+app.use('/search', serch);
 
 app.listen(port);
 console.log('The magic happens on port ' + port);

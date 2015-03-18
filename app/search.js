@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
  res.render('../views/savePlace');
 });*/
 global.points;
-moon.createConnection('mongodb://localhost/prueba', function(err, db){
+moon.createConnection('mongodb://rafa.com/prueba', function(err, db){
   if(err)
     console.log(err);
   else{
