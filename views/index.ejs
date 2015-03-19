@@ -1,29 +1,82 @@
-<!doctype html>
 <html>
 <head>
-	<title>Node Authentication</title>
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<script src="javascripts/socket.io.js"></script>
-
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
+  <meta charset = "UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <link rel="stylesheet" href= "/stylesheets/css1.css"/>
+  <link rel="stylesheet" href="/stylesheets/foundation/css/foundation.css"/>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-4.3.0/css/font-awesome.css"/>
+  <link rel="stylesheet" href="/stylesheets/font-awesome-4.3.0/css/font-awesome.min.css"/>
+  <script src="/stylesheets/foundation/js/vendor/modernizr.js"></script>
+  <title></title>
 </head>
 <body>
-<div class="container">
+  <div class="parallax-background">
+    <header>
 
-	<div class="jumbotron text-center">
-		<h1><span class="fa fa-lock"></span> Raedam</h1>
+      <div id="signIn">
+        <a href="sign_up.html" class="button">Sign Up</a>
+        <a href="LogIn.html" class="button">Log In</a>
+      </div>
+    </header>
+    <div class="intro-text">
+     <section id="container">
+      <div id="logo">
+        <img src =images/raedam-logo_360.png>
+        <div id="tabla">
+          <h2>Nunca fue tan fácil estacionarse</h2>
 
-		<p>Entra o registrate</p>
+          <div class = "text">
+            <p>Raedam conecta personas que necesitan estacionarse con el espacio más cercano para hacerlo.</p>
+            <p>Así de simple.</p>
+            <div id = "giveAskPlace">
+              <button type="button">Registra tu espacio</button>
+              <button type="button">Busca un espacio</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
-		<a href="/login" class="btn btn-default"><span class="fa fa-user"></span> Login</a>
-		<a href="/signup" class="btn btn-default"><span class="fa fa-user"></span> Signup</a>
-		<a href="/auth/facebook" class="btn btn-primary"><span class="fa fa-facebook"></span> Facebook</a>
-		<a href="/auth/twitter" class="btn btn-info"><span class="fa fa-twitter"></span> Twitter</a>
-		<a href="/auth/google" class="btn btn-danger"><span class="fa fa-google-plus"></span> Google+</a>
-	</div>
-</div>
+  </div>
+
+  <div class="parallax-content">
+    <center>
+      <div id="how">
+        <section class= "large columns"><h1>¿Cómo funciona?</h1></section>
+        <br />
+        <br />
+
+        <section class = "large-4 columns supporticons">
+          <figure id="icon">
+            <i class="fa fa-search fa-5x"></i>
+          </figure>
+          <br />
+          <h2>Busca un Espacio</h2>
+          <p>Regístrate y encuentra un espacio en la zona donde deseas estacionarte.</p>
+        </section>
+        <section class = "large-4 columns supporticons">
+          <figure id="icon">
+            <i class="fa fa-calendar fa-5x"></i>            
+          </figure>
+
+          <br/>
+          <h2>Apártalo</h2>
+          <p>¡Que no te lo ganen! Aparta el lugar que escogiste para que lo puedas utilizar cuando tú quieras.</p>
+        </section>
+        <section class = "large-4 columns supporticons">
+          <figure id="icon">
+            <i class="fa fa-car fa-5x"></i>            
+          </figure>
+
+          <br/>
+          <h2>¡Estaciónate!</h2>
+          <p>Ya apartado tu lugar sólo tienes que llegar a la hora acordada y estacionarte.</p>
+        </section>
+      </div>
+      <p>.</p>
+    </center>
+
+  </div>         
+
 </body>
 </html>

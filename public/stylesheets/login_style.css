@@ -1,0 +1,22 @@
+#BODY {
+ 	padding-top:0px;
+ 	background-image: url(../images/calle1.jpg);
+ 	background-size: 100%; 
+}
+
+#Tabla {
+	background-color: white;
+	opacity: 0.95;
+	border-radius: 5px;
+	height: 32em;
+	width: 30em;
+	margin: 6em auto
+
+}
+
+.logo {
+	width: 30%;
+	float: right;
+	margin: 1em auto;
+
+}

@@ -3,7 +3,7 @@
   }
   nav .button {
       border: 0;
-      background: #239EEB;
+      background: #212121;
       -webkit-box-shadow: 0;
       -moz-box-shadow: 0;
       box-shadow: 0;
@@ -28,7 +28,7 @@
     }
   #submit{
         border: 0;
-        background: #239EEB;
+        background: #212121;
         -webkit-box-shadow: 0;
         -moz-box-shadow: 0;
         box-shadow: 0;
