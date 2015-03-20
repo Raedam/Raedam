@@ -14,7 +14,7 @@ module.exports = function (app, passport) {
   app.get('/payment', isLoggedIn, function(req, res){
     res.render('payment.ejs');
   });
-  
+  //4242424242424242
   app.post('/payment', isLoggedIn, function(req, res){
     var charge = {
       description: req.body.description,

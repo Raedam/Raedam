@@ -4,15 +4,15 @@
 	<title>Node Authentication</title>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
-	<style>
-		body 		{ padding-top:80px; }
-	</style>
+	<link rel="stylesheet" href="/stylesheets/login_style.css">
+	
 </head>
-<body>
-	<div class="container">
-		<div class="col-sm-6 col-sm-offset-3">
+<body id="BODY">
+	<div id="Tabla">
+		<div class="col-sm-8 col-sm-offset-2">
+		<a href="#"><img src="../images/raedam-logo_360.png" class="logo"><br><br></a>
 
-			<h1><span class="fa fa-sign-in"></span> Login</h1>
+			<h1>Login</h1>
 
 			<% if (message.length > 0) { %>
 				<div class="alert alert-danger"><%= message %></div>
@@ -37,6 +37,7 @@
 			<p>¿No tienes una cuenta? <a href="/signup">Registrate</a></p>
 			<p>Regresa al <a href="/">inicio</a>.</p>
 
+		</div>
 		</div>
 	</div>
 </body>

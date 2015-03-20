@@ -101,34 +101,53 @@
  	<title>Raedam-Busqueda de espacios</title>
 </head>
 <body>
-	<header>
-		<div class="large-12 columns">
-			<a href="#"><img src="../images/raedam-logo_360.png" width="100" height="100"/></a>
+<header>
+    <nav class="top-bar" data-topbar role="navigation">
+	  	<ul class="title-area">
+	    	<li class="name">
+	      		<h1><a href="#">Raedam</a></h1>
+	    	</li>
+	     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+	    	<li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+	  	</ul>
+	  	<section class="top-bar-section">
+	    <!-- Right Nav Section -->
+	    <ul class="right">
+	      	<li class="active"><a href="#">Busqueda de espacios</a></li>
+	      	<li class="has-dropdown">
+	        	<a href="#">Menu</a>
+	        	<ul class="dropdown">
+	          		<li class="active"><a href="#">Busqueda de espacios</a></li>
+	          		<li><a href="#">Registro de espacios</a></li>
+	          		<li><a href="#">Log out</a></li>
+	        	</ul>
+	      	</li>
+	    </ul>
+	  	</section>
+	</nav>
+  
+</header>
 
-			<span id="usernav">
-				<a href="#">Logout</a>
-				<a href="#">Mi Perfil
-			  		<span>
-			  			<img src="../images/raedam-logo_360.png" width="10%" height="10%" />
-			  		</span>
-				</a>
-			</span>
-		</div>
-	</header>
+<div id ="container">
 	<div id="BarraBusqueda">
-		<div class="large-12 columns">
-		<input type="text" placeholder="Calle">
-	    <br>
+		<h1>¿Dónde desea estacionarse?</h1>
+		<p>Pon la colonia en la que deseas estacionarte, te vamos a dar los resultados mas cercanos a donde necesites estacionarte.</p>
+ 		<br>
+  		<div class="large-12 columns">
+    		<input type="text" placeholder="Colonia">
+        	<br>
+    	</div>
 	</div>
-	</div>
-	<!--Aqui va el mapa-->
-	<div class="map">
-		<div class= "large-12 columns">
-			<h2>Ponga en el mapa la ubicación</h2>
-			<div class = "large-12 columns">
-				<div id="googleMap"></div>
-			</div>
-		</div>
-	</div>
+	<input id="submit" type="submit" value="Submit">
+</div>
+<!--Aqui va el mapa-->
+<div class="map">
+  <div class= "large-12 columns">
+    <h3>Elija el lugar en el que desea estacionarse</h3>
+    <div class = "large-12 columns">
+      <div id="googleMap"></div>
+    </div>
+  </div>
+</div>
 </body>
 </html>

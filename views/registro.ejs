@@ -48,12 +48,6 @@
         }
         function toggleBounce() {
            infowindow.open(map, marker);
-          /* if (marker.getAnimation() != null) {
-         /      /marker.setAnimation(null);
-                marker.setTitle="Hola";
-           } else {
-            // marker.setAnimation(google.maps.Animation.BOUNCE);
-            } */
             }
         function handleNoGeolocation(errorFlag) {
             if (errorFlag) {
@@ -74,22 +68,35 @@
     </script>
 </head>
 <body>
-    <header>
-        <div class="large-12 columns">
-        <div class="wrapper">
-            <a href="#"><img src="images/raedam-logo_360.png" width="12%" height="12%"/></a>
-            <span id="usernav">
-                <a href="#">Logout</a>
-                <a href="#">Mi Perfil
-                    <span>
-                        <img src="images/raedam-logo_360.png" width="10%" height="10%" />
-                    </span>
-                </a>
-            </span>
-        </div>
-        </div>
-    </header>
-    <div id= "container">
+  
+  <header>
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Raedam</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Registro de espacios</a></li>
+      <li class="has-dropdown">
+        <a href="/">Menu</a>
+        <ul class="dropdown">
+          <li><a href="/search">Busqueda de espacios</a></li>
+          <li class="active"><a href="#">Registro de espacios</a></li>
+          <li><a href="/logout">Log out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+  </header>
+
+  <div id= "container">
     <div class ="large-9 columns">
       <h1>Registra tu lugar</h1>
       <br></br>

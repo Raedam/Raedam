@@ -29,9 +29,10 @@ header{
   max-width: 100%;
   position: relative;
   top: 100%;
-  padding: 65px;
+  padding: 75px;
   font-size: 20px;
-  background-color: #239EEB;
+  background-color: #000;
+  opacity: 0.975;
 }     
 button{
   padding: 10px;
@@ -62,12 +63,21 @@ button{
 p{
   color:white;
 }
-h2{
-  color: white;
+h2, h1{
+  color: #F5F5F5;
 }
   .container{
   overflow: visible;
 }
+
+  #tabla {
+  background-color: #000;
+  opacity: 0.9;
+  border-radius: 5px;
+  height: 5.5em;
+  width: 15em;
+  margin: 0em auto
+  }
 
 
 #signIn{
@@ -80,15 +90,16 @@ h2{
   border: 2px solid white;
   border-radius: 3px;
 }
-.icon{
-  background: #1DE9B6;
+#icon{
+  background: #00BCD4;
   border-radius: 50%;
   width: 200px;
   position: relative;
+  opacity: 1 !important;
 }
 .text{
   font-size:16px;
-  margin-bottom: 30px;
+ 
 }
 #giveAskPlace button{
   background: none;
