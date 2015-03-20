@@ -1,4 +1,6 @@
 var isLoggedIn;
+var Conekta = require('conekta-node'),
+    conekta = Conekta.init('key_pBrvUTbrMzG2Kb4gRMtX2g');
 
 module.exports = function (app, passport) {
   app.get('/', function (req, res) {
@@ -9,9 +11,24 @@ module.exports = function (app, passport) {
       user : req.user
     });
   });
-  app.get('/payment', isLoggedIn, function (req, res) {
+  app.get('/payment', isLoggedIn, function(req, res){
     res.render('payment.ejs');
   });
+  
+  app.post('/payment', isLoggedIn, function(req, res){
+    var charge = {
+      description: req.body.description,
+      amount: req.body.amount,
+      card: req.body.conektaTokenId,
+      currency: 'MXN'
+    }
+    console.log(charge);  
+    conekta.Charge.create(charge, function (err, response) {
+      console.log(response);
+    });
+
+  });
+
 // LOGOUT
   app.get('/logout', function (req, res) {
     req.logout();
