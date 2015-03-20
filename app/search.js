@@ -6,7 +6,7 @@ var moon           =         require('mongoose');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 global.points;
-moon.createConnection('mongodb://rafa.com/prueba', function (err) {
+moon.createConnection('mongodb://localhost/prueba', function (err) {
   if (err) {
     console.log(err);
   }

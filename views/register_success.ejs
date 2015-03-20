@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Raedam - Success</title>
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/stylesheets/login_style.css">
+
+</head>
+<body id="BODY">
+	<div id="Tabla">
+	
+		<div class="col-sm-8 col-sm-offset-2">
+		<a href="#"><img src="../images/raedam-logo_360.png" class="logo"><br><br></a>
+			<center><h1>¡Felicidades!</h1><br>
+			<p> ¡Tu espacio ha sido guardado con éxito!</p><br>
+
+			<% if (message.length > 0) { %>
+				<div class="alert alert-danger"><%= message %></div>
+			<% } %>
+				
+				<a href="/profile"><button type="submit" class="btn btn-warning btn-lg">Ver Perfil</button></a>
+			</center>
+			<hr>
+
+			<p>¿Ya tienes una cuenta? <a href="/login">Entra</a></p>
+			<p>Regresa al <a href="/">inicio</a>.</p>
+	
+		</div>
+	</div>	
+</body>
+</html>

@@ -78,7 +78,7 @@ router.post('/',function(req,res){
 
   });
 
-  res.send('<h1>Lugar Guardado</h1>');
+  res.render('register_success', { message: 'Lugar guardado'});
 });
 
 

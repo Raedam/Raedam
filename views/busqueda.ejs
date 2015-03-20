@@ -61,9 +61,10 @@
 			      	infowindow.open(map, markerClient);
 				});
 				var infowindow1 = new google.maps.InfoWindow;
-				google.maps.event.addListener(markerRent1, 'mouseover', function() {
-					infowindow.setContent("<p>Este es un lugar donde puedes estacionarte</p>");
-					infowindow.open(map, markerRent1);
+				google.maps.event.addListener(markerRent1, 'click', function() {
+					
+					window.location.href="payment";
+
 				});
 
 			    map.setCenter(pos);},
