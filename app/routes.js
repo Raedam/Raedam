@@ -9,7 +9,7 @@ module.exports = function (app, passport) {
       user : req.user
     });
   });
-  app.get('/payment', isLoggedIn, function (res) {
+  app.get('/payment', isLoggedIn, function (req, res) {
     res.render('payment.ejs');
   });
 // LOGOUT
