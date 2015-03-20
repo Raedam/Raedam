@@ -9,8 +9,6 @@ global.points;
 moon.createConnection('mongodb://rafa.com/prueba', function (err) {
   if (err) {
     console.log(err);
-  } else {
-    console.log("Connected to MongoDB");
   }
 });
 app.get('/', function (req, res) {
