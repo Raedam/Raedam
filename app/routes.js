@@ -26,6 +26,7 @@ module.exports = function (app, passport) {
     conekta.Charge.create(charge, function (err, response) {
       console.log(response);
     });
+    res.redirect('/profile');
 
   });
 
