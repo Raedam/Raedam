@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<link rel="stylesheet" href= "stylesheets/registro.css"/>
+    <link rel="stylesheet" href="stylesheets/foundation/css/foundation.css"/>
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.3.0/css/font-awesome.css"/>
+    <link rel="stylesheet" href="stylesheets/font-awesome-4.3.0/css/font-awesome.min.css"/>
+    <script src="stylesheets/foundation/js/vendor/modernizr.js"></script>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no">
 	<title>Payment</title>
@@ -8,6 +13,34 @@
 	<script type="text/javascript" src="https://conektaapi.s3.amazonaws.com/v0.3.2/js/conekta.js"></script>
 </head>
 <body>
+<header>
+    <nav class="top-bar" data-topbar role="navigation">
+  <ul class="title-area">
+    <li class="name">
+      <h1><a href="#">Raedam</a></h1>
+    </li>
+     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
+    <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+  </ul>
+
+  <section class="top-bar-section">
+    <!-- Right Nav Section -->
+    <ul class="right">
+      <li class="active"><a href="#">Registro de espacios</a></li>
+      <li class="has-dropdown">
+        <a href="#">Menu</a>
+        <ul class="dropdown">
+          <li><a href="/search">Busqueda de espacios</a></li>
+          <li class="active"><a href="#">Registro de espacios</a></li>
+          <li><a href="/logout">Log out</a></li>
+        </ul>
+      </li>
+    </ul>
+  </section>
+</nav>
+  </header>
+	<div id="container">
+	<h1>Pagos</h1>
 	<form action="" method="POST" id="card-form">
 	  <span class="card-errors"></span>
 	  <div class="form-row">
@@ -23,42 +56,53 @@
 	    </label>
 	  </div>
 	  <div class="form-row">
+	     <div class="large-6 columns">
 	    <label>
 	      <span>CVC</span>
-	      <input type="text" size="4" data-conekta="card[cvc]"/>
+	      <input type="text" size="6" data-conekta="card[cvc]"/>
 	    </label>
+	    <div>
 	  </div>
 	  <div class="form-row">
 	    <label>
+	    <div class="large-6 columns">
 	      <span>Fecha de expiración (MM/AAAA)</span>
 	      <input type="text" size="2" data-conekta="card[exp_month]"/>
 	    </label>
 	    <span>/</span>
-	    <input type="text" size="4" data-conekta="card[exp_year]"/>
-	    
+	    <input type="text" size="6" data-conekta="card[exp_year]"/>
+	    </div>
 	  </div>
 	  <div class="form-row">
+	    <div class="large-6 columns">
 	    <label>
 	    	<span>Descripcion</span>
 	    	<input type="text" name="description" />
 	    </label>
 	  </div>
+	  </div>
 	  <div class="form-row">
+	  <div class="large-6 columns">
 	    <label>
 	    	<span>Monto</span>
 	    	<input type="text" name="amount" />
 	    </label>
 	  </div>
+	  </div>
 	  <div class="form-row">
+	  <div class="large-12 columns">
 	    <label>
 	    	<span>Moneda</span>
 	    	<input type="text" name="currency" size="3"/>
 	    </label>
+	  </div>  
 	  </div>
-	  
-	  <button type="submit">Suscribirse ahora!</button>
+	  <div class="large-12 columns">
+	  <button type="submit">Pagar ahora</button>
+	  </div>
 	</form>
 	<script type="text/javascript">
+	</div>
  
 	 // Conekta Public Key
 	  Conekta.setPublishableKey('key_ExT6okhg69VcMmznRRvHo7Q');

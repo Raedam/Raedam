@@ -27,15 +27,7 @@
                     draggable:true,
                     animation: google.maps.Animation.DROP
                 });
-                var infowindow = new google.maps.InfoWindow;
-                    google.maps.event.addListener(marker, 'mouseover', function() {
-                        infowindow.setContent("<p>Marker Location:" + marker.getPosition() + "</p>");
-                        var lat = marker.getPosition().lat();
-                        var ln = marker.getPosition().lng();
-                        document.getElementById("lat").value=lat;
-                        document.getElementById("lon").value=ln;
-                        infowindow.open(map, marker);
-                    });
+               
                 map.setCenter(pos);},
                 function() {
                     handleNoGeolocation(true);
