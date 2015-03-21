@@ -11,6 +11,11 @@ module.exports = function (app, passport) {
       user : req.user
     });
   });
+  app.get('/payfinish', isLoggedIn, function (req, res) {
+    res.render('paymentready.ejs', {
+      user : req.user
+    });
+  });
   app.get('/payment', isLoggedIn, function(req, res){
     res.render('payment.ejs');
   });
@@ -26,7 +31,7 @@ module.exports = function (app, passport) {
     conekta.Charge.create(charge, function (err, response) {
       console.log(response);
     });
-    res.redirect('/profile');
+    res.redirect('/payfinish');
 
   });
 
